@@ -1,0 +1,25 @@
+cabal-version:      3.0
+name:               test-ghc
+version:            0.1.0.0
+license:            MIT
+license-file:       LICENSE
+author:             haruki7049
+maintainer:         tontonkirikiri@gmail.com
+build-type:         Simple
+
+common warnings
+  ghc-options: -Wall
+
+executable test-ghc
+  import:           warnings
+  main-is:          Main.hs
+  build-depends:    base ^>=4.18.2.1
+  hs-source-dirs:   src
+  default-language: Haskell2010
+
+library
+  default-language: Haskell2010
+  build-depends:
+    base,
+    HUnit,
+    cmdargs,
